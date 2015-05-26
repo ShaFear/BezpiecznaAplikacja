@@ -19,3 +19,5 @@ Table uzytkownik
   note varchar(255)
 )
   
+link do aplikacji:
+len.iem.pw.edu.pl/~login/apps/api

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="pl">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Jesteś zalogowany jako {{ user }}
+</br>
+<a href={{ request.url_root + path_root + "logout" }}> wyloguj się </a>
+</br>
+<a href={{ request.url_root + path_root + "myNotes" }}> zobacz swoje notatki </a>
+</br>
+</br>
+Dodaj nową notatkę:
+<form action={{ request.url_root + path_root + "addNote"}} method="post" accept-charset="UTF-8">
+        <input type="text" name="newnote"><br>
+        <input type="submit">
+</form>
+
+
+</body>
+</html>

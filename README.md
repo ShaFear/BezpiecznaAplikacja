@@ -21,3 +21,5 @@ Table uzytkownik
   
 link do aplikacji:
 len.iem.pw.edu.pl/~login/apps/api
+
+Framework: Flask, Baza danych: sqlite3

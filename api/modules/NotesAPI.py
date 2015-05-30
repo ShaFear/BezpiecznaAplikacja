@@ -5,6 +5,8 @@ from flask import Blueprint, request, session, render_template
 from modules.others.Settings import path_root
 from modules.others.Settings import prefix
 from modules.others.DatabaseUTILS import cur_execute
+import modules.security.Injection as Injection
+import modules.security.InputValidation as InputValidation
 
 
 notes_api = Blueprint('notes_api', __name__)
@@ -13,7 +15,10 @@ notes_api = Blueprint('notes_api', __name__)
 @notes_api.route(prefix + 'addNote', methods=['POST'])
 def new_note():
     note = request.form['newnote']
-    cur_execute("INSERT INTO " + session["login"] + " VALUES(?)", (note, ))
+    note = Injection.changeText(note, False)
+    if not InputValidation.verify_note(note):
+        return "Błędny input"
+    cur_execute("INSERT INTO " + session['login'] + " VALUES(?)", (note, ))
     return render_template("menu.html", user=str(session["login"]), path_root=path_root)
 
 
@@ -21,7 +26,7 @@ def new_note():
 def my_notes():
     result = u""
     i = 0
-    for note in cur_execute("SELECT * FROM " + session["login"]):
+    for note in cur_execute("SELECT * FROM " + session['login']):
         i += 1
         result += u"<b>Notatka numer: " + str(i) + "</b>"
         result += u"</br>"

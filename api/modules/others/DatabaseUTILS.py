@@ -1,3 +1,4 @@
+# coding=utf-8
 __author__ = 'shafe_000'
 
 import sqlite3

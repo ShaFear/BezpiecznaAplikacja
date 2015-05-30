@@ -1,0 +1,47 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=EU, ST=inny, L=inny, O=inny, OU=inny, CN=inny
+        Validity
+            Not Before: May  4 17:49:50 2015 GMT
+            Not After : May  3 17:49:50 2016 GMT
+        Subject: C=PL, ST=maz, L=maz, O=maz, OU=maz, CN=maz
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:db:96:82:93:fb:53:e3:dc:06:10:21:63:d4:79:
+                    3e:0f:a2:59:14:a1:ac:22:a5:46:b7:52:43:ac:30:
+                    db:42:f7:d2:ec:df:0a:75:30:44:bc:ec:b5:9c:c0:
+                    db:cf:76:42:e6:3b:76:f7:fc:15:c2:8f:a7:04:90:
+                    0d:2a:22:82:6f:80:ad:76:3b:d4:1a:3b:30:52:3d:
+                    31:12:62:30:37:c8:84:57:3f:14:7d:32:b1:b3:84:
+                    10:d3:30:4c:1e:90:68:45:bb:16:da:6a:a4:cf:3f:
+                    af:a8:f7:b7:05:f0:d9:39:52:99:28:29:cb:86:3d:
+                    e9:bd:51:15:14:74:6b:28:ef
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: md5WithRSAEncryption
+        03:b4:14:29:4e:42:5e:4d:4f:d4:3d:3a:0b:cd:90:b5:90:77:
+        cc:b3:25:db:e2:b5:a4:80:cf:1f:5d:4c:dc:fc:e2:c9:c9:1a:
+        ef:dd:6f:92:c8:63:df:60:a8:50:25:72:3c:0c:c4:d0:84:df:
+        d2:03:46:6e:57:00:af:b8:99:ba:5b:02:b4:6d:4e:54:c5:92:
+        8c:48:0b:66:62:68:ed:52:6c:e9:78:0f:26:83:3c:39:e3:21:
+        c6:b5:b9:31:b6:54:17:34:f7:eb:cd:c6:97:97:c3:bf:ff:c2:
+        4b:9a:5c:f4:40:1b:28:a7:ea:e3:1e:f7:b7:82:74:e4:61:22:
+        d3:fd
+-----BEGIN CERTIFICATE-----
+MIICGjCCAYMCAQEwDQYJKoZIhvcNAQEEBQAwWDELMAkGA1UEBhMCRVUxDTALBgNV
+BAgTBGlubnkxDTALBgNVBAcTBGlubnkxDTALBgNVBAoTBGlubnkxDTALBgNVBAsT
+BGlubnkxDTALBgNVBAMTBGlubnkwHhcNMTUwNTA0MTc0OTUwWhcNMTYwNTAzMTc0
+OTUwWjBTMQswCQYDVQQGEwJQTDEMMAoGA1UECBMDbWF6MQwwCgYDVQQHEwNtYXox
+DDAKBgNVBAoTA21hejEMMAoGA1UECxMDbWF6MQwwCgYDVQQDEwNtYXowgZ8wDQYJ
+KoZIhvcNAQEBBQADgY0AMIGJAoGBANuWgpP7U+PcBhAhY9R5Pg+iWRShrCKlRrdS
+Q6ww20L30uzfCnUwRLzstZzA2892QuY7dvf8FcKPpwSQDSoigm+ArXY71Bo7MFI9
+MRJiMDfIhFc/FH0ysbOEENMwTB6QaEW7FtpqpM8/r6j3twXw2TlSmSgpy4Y96b1R
+FRR0ayjvAgMBAAEwDQYJKoZIhvcNAQEEBQADgYEAA7QUKU5CXk1P1D06C82QtZB3
+zLMl2+K1pIDPH11M3Pziycka791vkshj32CoUCVyPAzE0ITf0gNGblcAr7iZulsC
+tG1OVMWSjEgLZmJo7VJs6XgPJoM8OeMhxrW5MbZUFzT3683Gl5fDv//CS5pc9EAb
+KKfq4x73t4J05GEi0/0=
+-----END CERTIFICATE-----

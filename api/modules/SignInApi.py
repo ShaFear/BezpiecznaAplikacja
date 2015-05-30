@@ -30,7 +30,7 @@ def not_logged():
 def sign_in():
     login = request.form['login']
     password = request.form['password']
-    results = cur_execute("SELECT 1 FROM users WHERE login = ? AND password = ?", (login, password))
+    results = cur_execute("SELECT login FROM users WHERE login = ? AND password = ?", (login, password))
     if len(results) > 0:
         session["login"] = login
         return render_template("menu.html", user=str(session["login"]), path_root=path_root)

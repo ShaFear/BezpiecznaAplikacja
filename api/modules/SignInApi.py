@@ -5,6 +5,7 @@ from flask import session, Blueprint, render_template, request
 
 from modules.others.Settings import prefix, path_root
 from modules.others.DatabaseUTILS import cur_execute
+from modules.security.Password import pass_to_key
 
 
 sign_in_api = Blueprint('sign_in_api', __name__)
@@ -30,6 +31,7 @@ def not_logged():
 def sign_in():
     login = request.form['login']
     password = request.form['password']
+    password = pass_to_key(password)
     results = cur_execute("SELECT login FROM users WHERE login = ? AND password = ?", (login, password))
     if len(results) > 0:
         session["login"] = login

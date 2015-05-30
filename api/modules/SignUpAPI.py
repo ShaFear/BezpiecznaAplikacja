@@ -6,6 +6,7 @@ from flask import Blueprint, render_template, request, session
 from modules.others.DatabaseUTILS import cur_execute
 from modules.others.Settings import prefix, path_root
 from modules.security import InputValidation
+from modules.security.Password import pass_to_key
 
 sign_up_api = Blueprint('sign_up_api', __name__)
 
@@ -16,6 +17,7 @@ def sign_up_post():
     password = request.form['password']
     if not (InputValidation.verify_login(login) and InputValidation.verify_password(password)):
         return "Błędny input"
+    password = pass_to_key(password)
     res = cur_execute("SELECT login FROM users WHERE login = (?)", (login,))
     if len(res) > 0:
         return "Wybrany login już istnieje :-("

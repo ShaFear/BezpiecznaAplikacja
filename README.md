@@ -19,3 +19,8 @@
 <p>https: https://volt.iem.pw.edu.pl:21000/~login/apps/api/ </p>
 
 <p>Framework: Flask, Baza danych: sqlite3</p>
+
+<h3> Zadania dla Ciebie :-) </h3>
+<p> Napisanie funkcji weryfikujacych input wedle wytycznych w komentarzach</p>
+<a href="https://github.com/ShaFear/BezpiecznaAplikacja/blob/master/api/modules/security/InputValidation.py">InputValidation.py</a><p> Napisanie funkcji, ktora policzy entropie (calculate_entropy) w js </p>
+<a href="https://github.com/ShaFear/BezpiecznaAplikacja/blob/master/api/templates/signUp.html">signUp.html</a>

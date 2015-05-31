@@ -32,5 +32,5 @@ app.register_blueprint(log_out_api)
 
 
 if __name__ == '__main__':
-    app.run(host='len.iem.pw.edu.pl',port=environ.get("PORT", 21000), processes=2,
+    app.run(host='volt.iem.pw.edu.pl',port=environ.get("PORT", 21000), processes=2,
         debug = False/True, ssl_context=context)

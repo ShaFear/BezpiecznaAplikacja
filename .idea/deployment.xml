@@ -9,6 +9,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="volt.iem.pw.edu.pl">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/www" local="$PROJECT_DIR$" web="" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>

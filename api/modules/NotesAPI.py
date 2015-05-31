@@ -1,7 +1,7 @@
 # coding=utf-8
 
 
-from flask import Blueprint, request, session, render_template
+from flask import Blueprint, request, session, render_template, redirect
 from modules.others.Settings import path_root
 from modules.others.Settings import prefix
 from modules.others.DatabaseUTILS import cur_execute
@@ -14,16 +14,24 @@ notes_api = Blueprint('notes_api', __name__)
 
 @notes_api.route(prefix + 'addNote', methods=['POST'])
 def new_note():
+    if not 'login' and 'ip' in session:
+        return redirect(prefix)
+    if not session["ip"] == str(request.remote_addr):
+        return redirect(prefix)
     note = request.form['newnote']
     note = Injection.changeText(note, False)
     if not InputValidation.verify_note(note):
         return "Błędny input"
     cur_execute("INSERT INTO " + session['login'] + " VALUES(?)", (note, ))
-    return render_template("menu.html", user=str(session["login"]), path_root=path_root)
+    return redirect(prefix)
 
 
 @notes_api.route(prefix + 'myNotes', methods=['GET'])
 def my_notes():
+    if not 'login' and 'ip' in session:
+        return redirect(prefix)
+    if not session["ip"] == str(request.remote_addr):
+        return redirect(prefix)
     result = u""
     i = 0
     for note in cur_execute("SELECT * FROM " + session['login']):

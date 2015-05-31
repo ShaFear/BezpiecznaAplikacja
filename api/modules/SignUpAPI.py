@@ -1,7 +1,7 @@
 # coding=utf-8
 
 
-from flask import Blueprint, render_template, request, session
+from flask import Blueprint, render_template, request, session, redirect
 
 from modules.others.DatabaseUTILS import cur_execute
 from modules.others.Settings import prefix, path_root
@@ -24,7 +24,7 @@ def sign_up_post():
     cur_execute("INSERT INTO users VALUES(?, ?)", (login, password,))
     cur_execute("CREATE TABLE " + login + " ( note charset(255) )")
     session["login"] = login
-    return render_template("menu.html", user=str(session["login"]), path_root=path_root)
+    return redirect(prefix)
 
 
 @sign_up_api.route(prefix + 'signUp', methods=['GET'])

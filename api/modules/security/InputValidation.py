@@ -25,8 +25,8 @@ def verify_password(password):
 
 
 # imię matki i miejsce urodzenia
-# łącznie mniej co najzwyżej 64 znaki
-# tylko polski alfabet
+# łącznie mniej co najwyżej 64 znaki
+# tylko polski alfabet i spacje
 
 
 def verify_secret(city, mother):

@@ -3,7 +3,7 @@ __author__ = 'shafe_000'
 
 
 # login powinien zawierać min. 3 znaki, maksimum 16
-# login nie może posiadać innych znaków niż alfabet polski + cyfry (Bardzo ważne! nic innego nie może przejść!)
+# login nie może posiadać innych znaków niż alfabet angielski + cyfry (Bardzo ważne! nic innego nie może przejść!)
 # login nie może się nazywać "users" (bo mi zamaże bazę danych ;__; )
 
 
@@ -25,11 +25,14 @@ def verify_password(password):
 
 
 # imię matki i miejsce urodzenia
+# łącznie mniej co najzwyżej 64 znaki
+# tylko polski alfabet
 
 
 def verify_secret(city, mother):
     if 1 < len(city) and len(mother) > 1:
-        return True
+        if len(city) + len(mother) < 65:
+            return True
     return False
 
 

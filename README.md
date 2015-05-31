@@ -11,6 +11,7 @@ URUCHAMIANIE HTTPS:
 3. Serwer uruchamiamy z katalogu "api" komenda "python https.py"
 4. Wklepujemy hasło "admin" (bardzo bezpieczne :P)
 5. Gdyby port był zajęty to zmieniamy ręcznie w https.py
+6. Zaleznie czy jest sie na lenie/volcie trzeba zmienic adres w https.py
 
 Model bazy danych:
 
@@ -30,6 +31,6 @@ Table uzytkownik
   
 link do aplikacji:
 http: len.iem.pw.edu.pl/~login/apps/api
-https: https://len.iem.pw.edu.pl:21000/~login/apps/api/
+https: https://len.iem.pw.edu.pl:21000/~login/apps/api/ 
 
 Framework: Flask, Baza danych: sqlite3

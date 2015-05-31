@@ -1,11 +1,11 @@
 # BezpiecznaAplikacja
 
-<p>UROCHAMIANIE HTTP:</p>
+<h4>UROCHAMIANIE HTTP:</h4>
 <p>1. Katalog "api" kopiujemy do katalogu www na lenie. (wiec bedzie login@len:~/www/api/)</p>
 <p>2. W modules/others/Settings.py zmieniamy login na nasz.</p>
 <p>3. Serwer uruchamiamy z katalogu "api" komenda "uwsgi uwsgi.ini"</p>
 
-<p>URUCHAMIANIE HTTPS:</p>
+<h4>URUCHAMIANIE HTTPS:</h4>
 <p>1. jak wyżej</p>
 <p>2. jak wyżej</p>
 <p>3. Serwer uruchamiamy z katalogu "api" komenda "python https.py"</p>
@@ -13,7 +13,7 @@
 <p>5. Gdyby port był zajęty to zmieniamy ręcznie w https.py</p>
 <p>6. Zaleznie czy jest sie na lenie/volcie trzeba zmienic adres w https.py</p>
   
-<p>link do aplikacji:</p>
+<h4>link do aplikacji:</h4>
 <p>http: len.iem.pw.edu.pl/~login/apps/api</p>
 <p>https: https://len.iem.pw.edu.pl:21000/~login/apps/api/ </p>
 <p>https: https://volt.iem.pw.edu.pl:21000/~login/apps/api/ </p>

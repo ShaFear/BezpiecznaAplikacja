@@ -1,36 +1,21 @@
 # BezpiecznaAplikacja
 
-UROCHAMIANIE HTTP:
-1. Katalog "api" kopiujemy do katalogu www na lenie. (wiec bedzie login@len:~/www/api/)
-2. W modules/others/Settings.py zmieniamy login na nasz.
-3. Serwer uruchamiamy z katalogu "api" komenda "uwsgi uwsgi.ini"
+<p>UROCHAMIANIE HTTP:</p>
+<p>1. Katalog "api" kopiujemy do katalogu www na lenie. (wiec bedzie login@len:~/www/api/)</p>
+<p>2. W modules/others/Settings.py zmieniamy login na nasz.</p>
+<p>3. Serwer uruchamiamy z katalogu "api" komenda "uwsgi uwsgi.ini"</p>
 
-URUCHAMIANIE HTTPS:
-1. jak wyżej
-2. jak wyżej
-3. Serwer uruchamiamy z katalogu "api" komenda "python https.py"
-4. Wklepujemy hasło "admin" (bardzo bezpieczne :P)
-5. Gdyby port był zajęty to zmieniamy ręcznie w https.py
-6. Zaleznie czy jest sie na lenie/volcie trzeba zmienic adres w https.py
-
-Model bazy danych:
-
-Table users
-(
-  login varchar(16)
-  password varchar(64)
-  secret varchar(64)
-)
-
-Kazdy uzytkownik ma wlasna tabele:
-
-Table uzytkownik
-(
-  note varchar(255)
-)
+<p>URUCHAMIANIE HTTPS:</p>
+<p>1. jak wyżej</p>
+<p>2. jak wyżej</p>
+<p>3. Serwer uruchamiamy z katalogu "api" komenda "python https.py"</p>
+<p>4. Wklepujemy hasło "admin" (bardzo bezpieczne :P)</p>
+<p>5. Gdyby port był zajęty to zmieniamy ręcznie w https.py</p>
+<p>6. Zaleznie czy jest sie na lenie/volcie trzeba zmienic adres w https.py</p>
   
-link do aplikacji:
-http: len.iem.pw.edu.pl/~login/apps/api
-https: https://len.iem.pw.edu.pl:21000/~login/apps/api/ 
+<p>link do aplikacji:</p>
+<p>http: len.iem.pw.edu.pl/~login/apps/api</p>
+<p>https: https://len.iem.pw.edu.pl:21000/~login/apps/api/ </p>
+<p>https: https://volt.iem.pw.edu.pl:21000/~login/apps/api/ </p>
 
-Framework: Flask, Baza danych: sqlite3
+<p>Framework: Flask, Baza danych: sqlite3</p>

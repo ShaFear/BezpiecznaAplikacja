@@ -18,6 +18,7 @@ Table users
 (
   login varchar(16)
   password varchar(64)
+  secret varchar(64)
 )
 
 Kazdy uzytkownik ma wlasna tabele:

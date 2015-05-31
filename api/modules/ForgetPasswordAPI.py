@@ -8,11 +8,11 @@ from modules.others.Settings import prefix, path_root
 from modules.security import InputValidation
 from modules.security.Password import pass_to_key
 
-sign_up_api = Blueprint('sign_up_api', __name__)
+forget_password_api = Blueprint('forget_password_api', __name__)
 
 
-@sign_up_api.route(prefix + 'signUp', methods=['POST'])
-def sign_up_post():
+@forget_password_api.route(prefix + 'changePassword', methods=['POST'])
+def forget_password_api_post():
     if 'login' and 'ip' in session:
         return redirect(prefix)
     login = request.form['login']
@@ -25,18 +25,20 @@ def sign_up_post():
     password = pass_to_key(password)
     secret = mother + city
     secret = secret.encode('ascii', 'xmlcharrefreplace')
-    secret = pass_to_key(secret)
+    secret = "(u'" + pass_to_key(secret) + "',)"
     res = cur_execute("SELECT login FROM users WHERE login = (?)", (login,))
-    if len(res) > 0:
-        return "Wybrany login już istnieje :-("
-    cur_execute("INSERT INTO users VALUES(?, ?, ?)", (login, password, secret))
-    cur_execute("CREATE TABLE " + login + " ( note charset(255) )")
+    if len(res) == 0:
+        return "Nie ma takiego użytkownika w bazie"
+    real_secret = cur_execute("SELECT secret FROM users WHERE login = (?)", (login,))[0]
+    if not str(secret) == str(real_secret):
+        return "Złe dane, nie możemy utworzyć nowego hasła"
+    cur_execute("UPDATE users SET password=(?) where login = (?)", (password, login))
     session["login"] = login
     return redirect(prefix)
 
 
-@sign_up_api.route(prefix + 'signUp', methods=['GET'])
-def sign_up_get():
+@forget_password_api.route(prefix + 'forgetPassword', methods=['GET'])
+def forget_password_api_get():
     if 'login' and 'ip' in session:
         return redirect(prefix)
-    return render_template("signUp.html", path_root=path_root)
+    return render_template("forgetPassword.html", path_root=path_root)

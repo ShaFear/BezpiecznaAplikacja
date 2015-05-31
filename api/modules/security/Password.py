@@ -10,3 +10,5 @@ def pass_to_key(password):
         salt = str(hashlib.md5("losowa_sol:" + str(i)).hexdigest())
         password = str(hashlib.sha256(password + salt).hexdigest())
     return password
+
+

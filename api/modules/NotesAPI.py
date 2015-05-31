@@ -1,8 +1,7 @@
 # coding=utf-8
 
 
-from flask import Blueprint, request, session, render_template, redirect
-from modules.others.Settings import path_root
+from flask import Blueprint, request, session, redirect
 from modules.others.Settings import prefix
 from modules.others.DatabaseUTILS import cur_execute
 import modules.security.Injection as Injection
@@ -14,7 +13,7 @@ notes_api = Blueprint('notes_api', __name__)
 
 @notes_api.route(prefix + 'addNote', methods=['POST'])
 def new_note():
-    if not 'login' and 'ip' in session:
+    if not 'login' or not 'ip' in session:
         return redirect(prefix)
     if not session["ip"] == str(request.remote_addr):
         return redirect(prefix)
@@ -28,7 +27,7 @@ def new_note():
 
 @notes_api.route(prefix + 'myNotes', methods=['GET'])
 def my_notes():
-    if not 'login' and 'ip' in session:
+    if not 'login' or not 'ip' in session:
         return redirect(prefix)
     if not session["ip"] == str(request.remote_addr):
         return redirect(prefix)

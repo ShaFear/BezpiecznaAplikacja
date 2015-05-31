@@ -31,6 +31,7 @@ def sign_up_post():
         return "Wybrany login już istnieje :-("
     cur_execute("INSERT INTO users VALUES(?, ?, ?)", (login, password, secret))
     cur_execute("CREATE TABLE " + login + " ( note charset(255) )")
+    cur_execute("CREATE TABLE " + login + "_ip" + " ( note charset(64) )")
     session["login"] = login
     return redirect(prefix)
 

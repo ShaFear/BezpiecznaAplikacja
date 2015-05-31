@@ -7,9 +7,13 @@
 <body>
 Jesteś zalogowany jako {{ user }}
 </br>
-<a href={{ request.url_root + path_root + "logout" }}> wyloguj się </a>
+<a href={{ request.url_root + path_root + "logout" }}> wyloguj się</a>
 </br>
-<a href={{ request.url_root + path_root + "myNotes" }}> zobacz swoje notatki </a>
+<a href={{ request.url_root + path_root + "myNotes" }}> zobacz swoje notatki</a>
+</br>
+<a href={{ request.url_root + path_root + "newConnections" }}> zobacz historię połączeń</a>
+</br>
+<a href={{ request.url_root + path_root + "newPassword" }}> zmień hasło</a>
 </br>
 </br>
 Dodaj nową notatkę:

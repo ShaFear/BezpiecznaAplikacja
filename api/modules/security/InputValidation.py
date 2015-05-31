@@ -3,8 +3,8 @@ __author__ = 'shafe_000'
 
 
 # login powinien zawierać min. 3 znaki, maksimum 16
-# login nie może posiadać innych znaków niż alfabet polski + cyfry +  znak "_" (Bardzo ważne! nic innego nie
-# może przejść!)
+# login nie może posiadać innych znaków niż alfabet polski + cyfry (Bardzo ważne! nic innego nie może przejść!)
+# login nie może się nazywać "users" (bo mi zamaże bazę danych ;__; )
 
 
 def verify_login(login):

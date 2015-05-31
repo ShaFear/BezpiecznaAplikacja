@@ -34,6 +34,10 @@ def forget_password_api_post():
         return "Złe dane, nie możemy utworzyć nowego hasła"
     cur_execute("UPDATE users SET password=(?) where login = (?)", (password, login))
     session["login"] = login
+    if not "wrongPasswordCount" in session:
+            session["wrongPasswordCount"] = 0
+    else:
+        session["wrongPasswordCount"] = 0
     return redirect(prefix)
 
 

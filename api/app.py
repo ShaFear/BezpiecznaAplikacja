@@ -2,6 +2,7 @@
 
 
 import os
+from os import environ
 
 from flask import Flask
 
@@ -29,4 +30,4 @@ app.register_blueprint(change_password_api)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='192.168.1.9',port=environ.get("PORT", 80))

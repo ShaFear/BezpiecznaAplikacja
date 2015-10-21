@@ -1,4 +1,4 @@
-<h1> Bezpieczna Aplikacja<h1>
+<h1> Bezpieczna Aplikacja</h1>
 
 Projekt studencki na przedmiot Ochrony Danych W Systemach Informatycznych. Aplikacja
 sieciowa pozwalająca użytkownikom na przechowywanie notatek skupiające się na kwest-

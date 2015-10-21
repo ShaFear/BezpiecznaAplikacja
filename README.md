@@ -2,7 +2,7 @@
 
 Projekt studencki na przedmiot Ochrony Danych W Systemach Informatycznych. Aplikacja sieciowa pozwalająca użytkownikom na przechowywanie notatek skupiające się na kwestiach bezpieczeństwa.
 
-• GitHub: <a href="github.com/trzye/BezpiecznaAplikacja">github.com/trzye/BezpiecznaAplikacja</a>
+• GitHub: <a href="http://github.com/trzye/BezpiecznaAplikacja">github.com/trzye/BezpiecznaAplikacja</a>
 
 • Użyte technologie: <b>Python, Flask, SQLite, HTML5</b>
 

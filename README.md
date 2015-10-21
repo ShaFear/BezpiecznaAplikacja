@@ -1,8 +1,6 @@
 <h1> Bezpieczna Aplikacja</h1>
 
-Projekt studencki na przedmiot Ochrony Danych W Systemach Informatycznych. Aplikacja
-sieciowa pozwalająca użytkownikom na przechowywanie notatek skupiające się na kwest-
-iach bezpieczeństwa.
+Projekt studencki na przedmiot Ochrony Danych W Systemach Informatycznych. Aplikacja sieciowa pozwalająca użytkownikom na przechowywanie notatek skupiające się na kwestiach bezpieczeństwa.
 
 • GitHub: <a href="github.com/trzye/BezpiecznaAplikacja">github.com/trzye/BezpiecznaAplikacja</a>
 

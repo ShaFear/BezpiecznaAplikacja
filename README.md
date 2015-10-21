@@ -4,7 +4,7 @@ Projekt studencki na przedmiot Ochrony Danych W Systemach Informatycznych. Aplik
 
 • GitHub: <a href="github.com/trzye/BezpiecznaAplikacja">github.com/trzye/BezpiecznaAplikacja</a>
 
-• Użyte technologie: Python, Flask, SQLite, HTML5
+• Użyte technologie: <b>Python, Flask, SQLite, HTML5</b>
 
 • Tematy: SSL, SQL Injection, funkcje skrótu, autoryzacja.
 
